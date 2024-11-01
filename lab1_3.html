@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Лінійні алгоритми - Призма</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        let n = parseInt(prompt("Введіть кількість кутів n", ""));
+        let r = parseFloat(prompt("Введіть радіус r основи", ""));
+        let h = parseFloat(prompt("Введіть висоту h призми", ""));
+        
+        // Довжина сторони основи
+        let a = 2 * r * Math.tan(Math.PI / n);
+        
+        // Периметр основи
+        let p = a * n;
+        
+        // Площа основи
+        let s_base = (1 / 2) * n * a * r;
+        
+        // Площа поверхні призми
+        let s_surface = 2 * s_base + p * h;
+        
+        // Об'єм призми
+        let volume = s_base * h;
+        
+        alert("Площа поверхні призми = " + s_surface.toFixed(2));
+        alert("Об'єм призми = " + volume.toFixed(2));
+    </script>
+</body>
+</html>
